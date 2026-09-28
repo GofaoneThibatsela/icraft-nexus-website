@@ -1,0 +1,541 @@
+Here is the complete, production-ready HTML code for your **iCraft-Nexus Co. (Pty) Ltd** website, incorporating all pricing tiers, your professional background, WhatsApp integration, and the Francistown & Maun operational presence:
+
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iCraft-Nexus Co. (Pty) Ltd | Architectural Design & Construction Consultancy</title>
+    
+    <!-- Google Fonts: Cormorant Garamond & Josefin Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        midnight: {
+                            DEFAULT: '#0B132B',
+                            light: '#1C2541',
+                            dark: '#070A17'
+                        },
+                        craftgold: {
+                            DEFAULT: '#D4AF37',
+                            light: '#E5C158',
+                            dark: '#AA8C2C'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Josefin Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+    </style>
+</head>
+<body class="bg-[#0B132B] text-[#F0F2F5] transition-colors duration-300 antialiased selection:bg-[#D4AF37] selection:text-[#0B132B]">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-[#D4AF37] text-[#0B132B] px-4 py-2 text-xs md:text-sm font-medium text-center tracking-wider">
+        <span>Operating across Francistown & Maun, Botswana</span>
+        <span class="mx-2">•</span>
+        <span>Direct Consultation & WhatsApp Inquiries Active</span>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-[#0B132B]/90 backdrop-blur-md border-b border-[#1C2541]">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Brand Logo / Name -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded bg-[#D4AF37] flex items-center justify-center text-[#0B132B] font-bold text-xl font-serif shadow-md group-hover:scale-105 transition-transform">
+                    iC
+                </div>
+                <div>
+                    <span class="text-xl font-bold tracking-wider uppercase block font-serif text-[#F0F2F5]">iCraft-Nexus</span>
+                    <span class="text-[10px] uppercase tracking-widest text-[#D4AF37]">Co. (Pty) Ltd</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-widest font-medium">
+                <a href="#work" class="hover:text-[#D4AF37] transition-colors">Work</a>
+                <a href="#services" class="hover:text-[#D4AF37] transition-colors">Services & Pricing</a>
+                <a href="#process" class="hover:text-[#D4AF37] transition-colors">Process</a>
+                <a href="#studio" class="hover:text-[#D4AF37] transition-colors">Studio</a>
+                <a href="#contact" class="hover:text-[#D4AF37] transition-colors">Contact</a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center space-x-4">
+                <a href="https://wa.me/26776542231?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20architectural%20services." target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded text-xs uppercase tracking-wider font-semibold transition-colors">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>WhatsApp</span>
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden p-2 text-[#F0F2F5] hover:text-[#D4AF37] focus:outline-none">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#1C2541] border-b border-[#0B132B] px-6 py-4 space-y-3 text-sm uppercase tracking-widest">
+            <a href="#work" class="block hover:text-[#D4AF37] transition-colors py-1">Work</a>
+            <a href="#services" class="block hover:text-[#D4AF37] transition-colors py-1">Services & Pricing</a>
+            <a href="#process" class="block hover:text-[#D4AF37] transition-colors py-1">Process</a>
+            <a href="#studio" class="block hover:text-[#D4AF37] transition-colors py-1">Studio</a>
+            <a href="#contact" class="block hover:text-[#D4AF37] transition-colors py-1">Contact</a>
+            <div class="pt-2">
+                <a href="https://wa.me/26776542231?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20architectural%20services." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center space-x-2 bg-emerald-600 text-white w-full py-2 rounded text-xs uppercase tracking-wider font-semibold">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Chat on WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[85vh] flex items-center justify-center px-6 py-20 bg-gradient-to-b from-[#0B132B] to-[#1C2541]">
+        <div class="max-w-5xl mx-auto text-center space-y-8">
+            <div class="inline-block border border-[#D4AF37]/40 px-4 py-1.5 rounded-full text-xs uppercase tracking-[0.25em] text-[#D4AF37]">
+                Architectural Design & Construction Consultancy
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-serif font-light tracking-tight text-[#F0F2F5] leading-[1.1]">
+                Thoughtful Architecture. <br>
+                <span class="italic font-normal text-[#D4AF37]">Precision Built for Botswana.</span>
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-lg sm:text-xl text-gray-300 font-light leading-relaxed">
+                We craft calm, functional residential and commercial spaces from concept to municipal approval. Based in Francistown, with specialized coordination in Maun.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <a href="#services" class="w-full sm:w-auto bg-[#D4AF37] hover:bg-[#E5C158] text-[#0B132B] px-8 py-4 rounded text-xs uppercase tracking-[0.2em] font-bold transition-all shadow-lg">
+                    View Pricing & Services
+                </a>
+                <a href="#contact" class="w-full sm:w-auto border border-[#F0F2F5]/30 hover:border-[#D4AF37] text-[#F0F2F5] hover:text-[#D4AF37] px-8 py-4 rounded text-xs uppercase tracking-[0.2em] font-medium transition-all">
+                    Request a Quote
+                </a>
+            </div>
+
+            <!-- Regional Note -->
+            <div class="pt-8 text-xs text-gray-400 tracking-wider flex items-center justify-center space-x-6">
+                <span class="flex items-center"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#D4AF37] mr-1.5"></i> Francistown HQ</span>
+                <span class="flex items-center"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#D4AF37] mr-1.5"></i> Maun Operations</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="py-24 px-6 bg-[#0B132B] border-t border-[#1C2541]">
+        <div class="max-w-7xl mx-auto space-y-16">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div>
+                    <span class="text-xs uppercase tracking-[0.2em] text-[#D4AF37] block mb-2">Portfolio Showcase</span>
+                    <h2 class="text-3xl sm:text-5xl font-serif font-light tracking-tight">Selected Projects & Concepts</h2>
+                </div>
+                <p class="text-gray-400 max-w-md text-sm font-light">
+                    Clear lines, careful spatial orientation, and modern climatic responsiveness tailored for local conditions.
+                </p>
+            </div>
+
+            <!-- Project Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group bg-[#1C2541] rounded-lg overflow-hidden border border-[#1C2541] hover:border-[#D4AF37]/50 transition-all">
+                    <div class="h-64 bg-[#070A17] flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        <div class="text-center p-6 space-y-2 z-10">
+                            <i data-lucide="home" class="w-10 h-10 mx-auto text-[#D4AF37] stroke-1"></i>
+                            <span class="text-xs tracking-widest uppercase text-gray-400 block">Residential Architecture</span>
+                            <h3 class="text-xl font-serif">The Tati Modern Residence</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex justify-between text-xs text-[#D4AF37] tracking-wider uppercase font-semibold">
+                            <span>Francistown, Botswana</span>
+                            <span>Full Residence</span>
+                        </div>
+                        <p class="text-sm text-gray-300 font-light">
+                            A spacious 4-bedroom contemporary home featuring optimized cross-ventilation, shaded pergolas, and an open-plan living layout.
+                        </p>
+                        <div class="pt-2 border-t border-[#0B132B] flex items-center justify-between text-xs text-gray-400">
+                            <span>Status: Approved Plans</span>
+                            <span class="text-[#D4AF37]">Twinmotion 3D Rendered</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group bg-[#1C2541] rounded-lg overflow-hidden border border-[#1C2541] hover:border-[#D4AF37]/50 transition-all">
+                    <div class="h-64 bg-[#070A17] flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        <div class="text-center p-6 space-y-2 z-10">
+                            <i data-lucide="layout-grid" class="w-10 h-10 mx-auto text-[#D4AF37] stroke-1"></i>
+                            <span class="text-xs tracking-widest uppercase text-gray-400 block">Interior Layout</span>
+                            <h3 class="text-xl font-serif">Okavango Executive Living & Dining</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex justify-between text-xs text-[#D4AF37] tracking-wider uppercase font-semibold">
+                            <span>Maun, Botswana</span>
+                            <span>Living / Dining Suite</span>
+                        </div>
+                        <p class="text-sm text-gray-300 font-light">
+                            Seamless integration of natural wood elements and modern neutral tones, creating a tranquil gathering space overlooking outdoor greenery.
+                        </p>
+                        <div class="pt-2 border-t border-[#0B132B] flex items-center justify-between text-xs text-gray-400">
+                            <span>Status: Completed Design</span>
+                            <span class="text-[#D4AF37]">Custom Millwork</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group bg-[#1C2541] rounded-lg overflow-hidden border border-[#1C2541] hover:border-[#D4AF37]/50 transition-all">
+                    <div class="h-64 bg-[#070A17] flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        <div class="text-center p-6 space-y-2 z-10">
+                            <i data-lucide="building" class="w-10 h-10 mx-auto text-[#D4AF37] stroke-1"></i>
+                            <span class="text-xs tracking-widest uppercase text-gray-400 block">Commercial Consultancy</span>
+                            <h3 class="text-xl font-serif">Northeast Commercial Office Pods</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex justify-between text-xs text-[#D4AF37] tracking-wider uppercase font-semibold">
+                            <span>Francistown, Botswana</span>
+                            <span>Commercial Space</span>
+                        </div>
+                        <p class="text-sm text-gray-300 font-light">
+                            Modular office suites engineered for optimal natural lighting, energy efficiency, and professional client reception flow.
+                        </p>
+                        <div class="pt-2 border-t border-[#0B132B] flex items-center justify-between text-xs text-gray-400">
+                            <span>Status: Tender Stage</span>
+                            <span class="text-[#D4AF37]">PPRA Compliant</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Transparent Pricing Section -->
+    <section id="services" class="py-24 px-6 bg-[#1C2541]/50 border-t border-[#1C2541]">
+        <div class="max-w-7xl mx-auto space-y-16">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-xs uppercase tracking-[0.2em] text-[#D4AF37] block">Transparent Investment</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-light tracking-tight">Residential Service Tiers & Pricing</h2>
+                <p class="text-gray-300 text-sm sm:text-base font-light">
+                    Clear, upfront pricing structure designed to filter expectations and match project scopes precisely. All rates quoted in Botswana Pula (P).
+                </p>
+            </div>
+
+            <!-- Pricing Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Tier 1 -->
+                <div class="bg-[#0B132B] border border-[#1C2541] rounded-lg p-8 flex flex-col justify-between hover:border-[#D4AF37] transition-all">
+                    <div class="space-y-4">
+                        <span class="text-xs uppercase tracking-widest text-[#D4AF37] block font-semibold">Tier 01</span>
+                        <h3 class="text-2xl font-serif">Single Room</h3>
+                        <div class="text-3xl font-serif text-[#D4AF37] font-medium">P 6,500 <span class="text-xs font-sans text-gray-400 block">starting price</span></div>
+                        <p class="text-sm text-gray-300 font-light">Ideal for custom bedrooms, home offices, or boutique studio additions.</p>
+                        <ul class="space-y-2 text-xs text-gray-400 pt-4 border-t border-[#1C2541]">
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-[#D4AF37] mr-2"></i> Conceptual Layout</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-[#D4AF37] mr-2"></i> 2D Technical Drawings</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-[#D4AF37] mr-2"></i> 1 Design Revision</li>
+                        </ul>
+                    </div>
+                    <div class="pt-8">
+                        <a href="#contact" class="block text-center bg-[#1C2541] hover:bg-[#D4AF37] hover:text-[#0B132B] text-[#F0F2F5] py-3 rounded text-xs uppercase tracking-widest font-semibold transition-all">Select Tier</a>
+                    </div>
+                </div>
+
+                <!-- Tier 2 -->
+                <div class="bg-[#0B132B] border border-[#1C2541] rounded-lg p-8 flex flex-col justify-between hover:border-[#D4AF37] transition-all">
+                    <div class="space-y-4">
+                        <span class="text-xs uppercase tracking-widest text-[#D4AF37] block font-semibold">Tier 02</span>
+                        <h3 class="text-2xl font-serif">Living & Dining</h3>
+                        <div class="text-3xl font-serif text-[#D4AF37] font-medium">P 9,500 <span class="text-xs font-sans text-gray-400 block">starting price</span></div>
+                        <p class="text-sm text-gray-300 font-light">Comprehensive design for primary social and family zones in the home.</p>
+                        <ul class="space-y-2 text-xs text-gray-400 pt-4 border-t border-[#1C2541]">
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-[#D4AF37] mr-2"></i> Spatial Planning</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-[#D4AF37] mr-2"></i> Furniture Layouts</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-[#D4AF37] mr-2"></i> 3D Twinmotion Views</li>
+                        </ul>
+                    </div>
+                    <div class="pt-8">
+                        <a href="#contact" class="block text-center bg-[#1C2541] hover:bg-[#D4AF37] hover:text-[#0B132B] text-[#F0F2F5] py-3 rounded text-xs uppercase tracking-widest font-semibold transition-all">Select Tier</a>
+                    </div>
+                </div>
+
+                <!-- Tier 3 -->
+                <div class="bg-[#0B132B] border border-[#1C2541] rounded-lg p-8 flex flex-col justify-between hover:border-[#D4AF37] transition-all">
+                    <div class="space-y-4">
+                        <span class="text-xs uppercase tracking-widest text-[#D4AF37] block font-semibold">Tier 03</span>
+                        <h3 class="text-2xl font-serif">Kitchen Design</h3>
+                        <div class="text-3xl font-serif text-[#D4AF37] font-medium">P 12,000 <span class="text-xs font-sans text-gray-400 block">starting price</span></div>
+                        <p class="text-sm text-gray-300 font-light">Ergonomic cabinetry layout, appliance integration, and material specifications.</p>
+                        <ul class="space-y-2 text-xs text-gray-400 pt-4 border-t border-[#1C2541]">
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-[#D4AF37] mr-2"></i> Detailed Joinery Plans</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-[#D4AF37] mr-2"></i> Plumbing & Electrical Co.</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-[#D4AF37] mr-2"></i> 3D Realistic Renders</li>
+                        </ul>
+                    </div>
+                    <div class="pt-8">
+                        <a href="#contact" class="block text-center bg-[#1C2541] hover:bg-[#D4AF37] hover:text-[#0B132B] text-[#F0F2F5] py-3 rounded text-xs uppercase tracking-widest font-semibold transition-all">Select Tier</a>
+                    </div>
+                </div>
+
+                <!-- Tier 4 -->
+                <div class="bg-[#0B132B] border border-[#D4AF37] rounded-lg p-8 flex flex-col justify-between relative shadow-xl">
+                    <div class="absolute -top-3 right-6 bg-[#D4AF37] text-[#0B132B] px-3 py-0.5 rounded text-[10px] uppercase font-bold tracking-widest">Complete</div>
+                    <div class="space-y-4">
+                        <span class="text-xs uppercase tracking-widest text-[#D4AF37] block font-semibold">Tier 04</span>
+                        <h3 class="text-2xl font-serif">Full Residence</h3>
+                        <div class="text-3xl font-serif text-[#D4AF37] font-medium">P 28,000+ <span class="text-xs font-sans text-gray-400 block">starting price</span></div>
+                        <p class="text-sm text-gray-300 font-light">End-to-end architectural design for complete residential homes and compounds.</p>
+                        <ul class="space-y-2 text-xs text-gray-400 pt-4 border-t border-[#1C2541]">
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-[#D4AF37] mr-2"></i> Full Municipal Submission Set</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-[#D4AF37] mr-2"></i> Complete 3D Package</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-[#D4AF37] mr-2"></i> Contractor Consultation</li>
+                        </ul>
+                    </div>
+                    <div class="pt-8">
+                        <a href="#contact" class="block text-center bg-[#D4AF37] hover:bg-[#E5C158] text-[#0B132B] py-3 rounded text-xs uppercase tracking-widest font-bold transition-all">Inquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-24 px-6 bg-[#0B132B] border-t border-[#1C2541]">
+        <div class="max-w-7xl mx-auto space-y-16">
+            <div class="text-center max-w-2xl mx-auto space-y-4">
+                <span class="text-xs uppercase tracking-[0.2em] text-[#D4AF37] block">Methodology</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-light tracking-tight">Our Four-Step Design Process</h2>
+                <p class="text-gray-400 text-sm font-light">From initial brief to final construction-ready documentation.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="space-y-4 p-6 bg-[#1C2541]/40 rounded border border-[#1C2541]">
+                    <span class="text-4xl font-serif text-[#D4AF37]">01</span>
+                    <h3 class="text-xl font-serif font-medium">Discovery & Brief</h3>
+                    <p class="text-sm text-gray-300 font-light">We discuss your lifestyle, site orientation in Francistown or Maun, budget parameters, and spatial requirements.</p>
+                </div>
+
+                <div class="space-y-4 p-6 bg-[#1C2541]/40 rounded border border-[#1C2541]">
+                    <span class="text-4xl font-serif text-[#D4AF37]">02</span>
+                    <h3 class="text-xl font-serif font-medium">Concept & Planning</h3>
+                    <p class="text-sm text-gray-300 font-light">Initial floor plans and volumetric studies are generated, incorporating your feedback and climatic preferences.</p>
+                </div>
+
+                <div class="space-y-4 p-6 bg-[#1C2541]/40 rounded border border-[#1C2541]">
+                    <span class="text-4xl font-serif text-[#D4AF37]">03</span>
+                    <h3 class="text-xl font-serif font-medium">Refinement & 3D</h3>
+                    <p class="text-sm text-gray-300 font-light">Detailed material choices, joinery details, and realistic Twinmotion 3D visualizations are developed for clarity.</p>
+                </div>
+
+                <div class="space-y-4 p-6 bg-[#1C2541]/40 rounded border border-[#1C2541]">
+                    <span class="text-4xl font-serif text-[#D4AF37]">04</span>
+                    <h3 class="text-xl font-serif font-medium">Approval & Build</h3>
+                    <p class="text-sm text-gray-300 font-light">Preparation of municipal submission packages and coordination with trusted local contractors and bricklayers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Studio / About Section -->
+    <section id="studio" class="py-24 px-6 bg-[#1C2541]/30 border-t border-[#1C2541]">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-xs uppercase tracking-[0.2em] text-[#D4AF37] block">The Studio</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-light leading-snug">Gofaone Thibatsela <br><span class="text-[#D4AF37] italic">Founder & Managing Director</span></h2>
+                <p class="text-gray-300 text-sm sm:text-base font-light leading-relaxed">
+                    iCraft-Nexus Co. (Pty) Ltd is an architectural design and construction consultancy rooted in Botswana. We believe that thoughtful architectural planning should balance aesthetic restraint with structural durability and local climate responsiveness.
+                </p>
+                <p class="text-gray-300 text-sm sm:text-base font-light leading-relaxed">
+                    Whether collaborating with local builders like Lassie Bricks or coordinating regional projects between Francistown and Maun, our commitment remains absolute: precision documentation that secures funding, satisfies municipal boards, and brings exceptional spaces to life.
+                </p>
+                <div class="pt-2 flex items-center space-x-6 text-xs text-gray-400 uppercase tracking-widest">
+                    <span>Registered Consultancy</span>
+                    <span>•</span>
+                    <span>PPRA Aligned</span>
+                </div>
+            </div>
+
+            <div class="bg-[#0B132B] p-8 rounded-lg border border-[#1C2541] space-y-6">
+                <h3 class="text-xl font-serif text-[#D4AF37]">Tender & Partner Credentials</h3>
+                <p class="text-sm text-gray-300 font-light">
+                    Our live portfolio and digital documentation serve as verified credentials for CEDA, PPRA, and private funding institutions seeking professional architectural oversight.
+                </p>
+                <div class="space-y-3 pt-2">
+                    <div class="flex items-center space-x-3 text-sm text-gray-300">
+                        <i data-lucide="check-circle" class="w-4 h-4 text-[#D4AF37]"></i>
+                        <span>Contractor & Supplier Collaboration Network</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-sm text-gray-300">
+                        <i data-lucide="check-circle" class="w-4 h-4 text-[#D4AF37]"></i>
+                        <span>Twinmotion 3D & Technical CAD Deliverables</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-sm text-gray-300">
+                        <i data-lucide="check-circle" class="w-4 h-4 text-[#D4AF37]"></i>
+                        <span>Direct WhatsApp Client Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Quote Request Form Section -->
+    <section id="contact" class="py-24 px-6 bg-[#0B132B] border-t border-[#1C2541]">
+        <div class="max-w-4xl mx-auto space-y-16">
+            <div class="text-center max-w-2xl mx-auto space-y-4">
+                <span class="text-xs uppercase tracking-[0.2em] text-[#D4AF37] block">Get in Touch</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-light tracking-tight">Start Your Project</h2>
+                <p class="text-gray-400 text-sm font-light">
+                    Complete the quote request form below or connect instantly via WhatsApp. We respond within a few hours.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Direct Info -->
+                <div class="space-y-8 md:col-span-1 bg-[#1C2541]/50 p-8 rounded-lg border border-[#1C2541]">
+                    <div class="space-y-2">
+                        <span class="text-xs uppercase tracking-widest text-[#D4AF37] block">Location</span>
+                        <p class="text-sm text-gray-300 font-light">Francistown, Botswana<br>(Active Maun Operations)</p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <span class="text-xs uppercase tracking-widest text-[#D4AF37] block">Direct Phone</span>
+                        <p class="text-sm text-gray-300 font-light">+267 76 542 231</p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <span class="text-xs uppercase tracking-widest text-[#D4AF37] block">Email Inquiries</span>
+                        <p class="text-sm text-gray-300 font-light">icraftnexus@yahoo.com<br>gthibatsela@gmail.com</p>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="https://wa.me/26776542231?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20architectural%20services." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white w-full py-3 rounded text-xs uppercase tracking-wider font-semibold transition-colors shadow-lg">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quote Form -->
+                <div class="md:col-span-2 bg-[#1C2541] p-8 rounded-lg border border-[#1C2541]">
+                    <form id="quote-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs uppercase tracking-widest text-gray-300 block">Your Name</label>
+                                <input type="text" required class="w-full bg-[#0B132B] border border-[#0B132B] focus:border-[#D4AF37] rounded px-4 py-3 text-sm text-white focus:outline-none transition-colors" placeholder="e.g. Kagiso Molaodi">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs uppercase tracking-widest text-gray-300 block">Phone / WhatsApp</label>
+                                <input type="text" required class="w-full bg-[#0B132B] border border-[#0B132B] focus:border-[#D4AF37] rounded px-4 py-3 text-sm text-white focus:outline-none transition-colors" placeholder="e.g. +267 71234567">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs uppercase tracking-widest text-gray-300 block">Project Location</label>
+                                <select class="w-full bg-[#0B132B] border border-[#0B132B] focus:border-[#D4AF37] rounded px-4 py-3 text-sm text-white focus:outline-none transition-colors">
+                                    <option>Francistown</option>
+                                    <option>Maun</option>
+                                    <option>Other Botswana Region</option>
+                                </select>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs uppercase tracking-widest text-gray-300 block">Service Tier / Project Type</label>
+                                <select class="w-full bg-[#0B132B] border border-[#0B132B] focus:border-[#D4AF37] rounded px-4 py-3 text-sm text-white focus:outline-none transition-colors">
+                                    <option>Single Room (P 6,500+)</option>
+                                    <option>Living & Dining (P 9,500+)</option>
+                                    <option>Kitchen Design (P 12,000+)</option>
+                                    <option>Full Residence (P 28,000+)</option>
+                                    <option>Commercial / Other Consultancy</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs uppercase tracking-widest text-gray-300 block">Project Details & Budget Notes</label>
+                            <textarea rows="4" required class="w-full bg-[#0B132B] border border-[#0B132B] focus:border-[#D4AF37] rounded px-4 py-3 text-sm text-white focus:outline-none transition-colors" placeholder="Describe your site size, desired rooms, and timeline..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-[#D4AF37] hover:bg-[#E5C158] text-[#0B132B] py-4 rounded text-xs uppercase tracking-[0.2em] font-bold transition-all shadow-lg">
+                            Submit Quote Request
+                        </button>
+                        
+                        <div id="form-success" class="hidden text-center text-xs text-emerald-400 tracking-wider">
+                            Thank you! Your inquiry has been received. We will respond shortly.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#070A17] border-t border-[#1C2541] py-12 px-6 text-center text-xs text-gray-500 space-y-4">
+        <div class="flex items-center justify-center space-x-3">
+            <div class="w-6 h-6 rounded bg-[#D4AF37] flex items-center justify-center text-[#0B132B] font-bold text-xs font-serif">
+                iC
+            </div>
+            <span class="text-sm font-bold uppercase tracking-wider font-serif text-[#F0F2F5]">iCraft-Nexus Co. (Pty) Ltd</span>
+        </div>
+        <p class="tracking-widest uppercase">Architectural Design & Construction Consultancy</p>
+        <p class="text-gray-600">&copy; 2026 iCraft-Nexus Co. (Pty) Ltd. All rights reserved. Francistown & Maun, Botswana.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Simple Form Submission Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const successMsg = document.getElementById('form-success');
+            successMsg.classList.remove('hidden');
+            document.getElementById('quote-form').reset();
+            setTimeout(() => {
+                successMsg.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
+
+```
